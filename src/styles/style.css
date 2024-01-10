@@ -1,0 +1,473 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: rgb(243, 239, 211);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand .app-bar__brand-logo img {
+  width: 3rem;
+  padding: 1px 15px;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: rgb(86, 84, 84);
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 69px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: rgb(243, 239, 211);
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(56, 55, 55);
+  padding-top: 10px;
+  padding-bottom: 5px;
+  height: 34px;
+  width: 100%;
+}
+
+/*
+ * Jumbotron
+ */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/images/heros/hero-image_4-small.jpg");
+  background-position: center;
+  background-color: rgba(237, 231, 198, 0.905);
+  background-size: cover;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #fafddf;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  font-weight: 500;
+}
+
+/*
+  Main Content
+*/
+
+main {
+  flex: 1;
+}
+
+.hero {
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  padding: 32px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
+}
+
+/*
+  Restaurants
+*/
+
+.restaurant-detail {
+  margin: 20px;
+  padding: 20px 30px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 254, 245);
+}
+
+.restaurant-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(176, 94, 53);
+  margin-top: 10px;
+}
+
+.restaurant-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.restaurant-info h3,
+.restaurant-menu h3,
+.post-reviews h3,
+.restaurant-reviews h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: rgb(56, 55, 55);
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.restaurant-info h4,
+.restaurant-menu h4,
+.restaurant-reviews h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 16px;
+  color: #444;
+}
+
+.restaurant-info p,
+.restaurant-menu .menu-item,
+.restaurant-reviews .review,
+.restaurant-reviews .review-name,
+.restaurant-reviews .review-date,
+.restaurant-reviews .review-text {
+  font-size: 1rem;
+  margin-top: 8px;
+  color: #666;
+  overflow: auto;
+}
+
+.menu-section {
+  margin-top: 20px;
+}
+.menu-section h4 {
+  margin-left: 15px;
+}
+
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu-item {
+  flex: 1;
+  font-size: 1.125rem;
+  min-width: 50px;
+  color: #333;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin: 0.5rem;
+}
+
+.menu-item:hover,
+.review:hover {
+  transform: scale(1.05);
+}
+
+.restaurant-reviews {
+  margin-bottom: 30px;
+}
+.restaurant-reviews .review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review {
+  flex: 1;
+  background-color: #fff;
+  min-width: 150px;
+  max-width: 120px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+}
+.review .review-date {
+  color: rgb(123, 125, 114);
+}
+.post-reviews {
+  margin: 100px;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(243, 238, 210);
+  width: 90%; /* Lebar 90% dari layar */
+  max-width: 800px; /* Maksimum lebar konten */
+  margin: 0 auto; /* Untuk membuat konten berada di tengah */
+}
+
+.post-reviews label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin: 10px 0px;
+}
+
+.post-reviews input,
+.post-reviews textarea {
+  font-size: 1rem;
+  padding: 2px 10px;
+  width: 95%;
+  margin-top: 5px;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+.post-reviews input {
+  height: 50px;
+}
+
+.post-reviews textarea {
+  height: 100px;
+}
+
+.post-reviews input:focus,
+.post-reviews textarea:focus {
+  outline: none;
+  border-color: rgb(201, 134, 97);
+}
+
+.post-reviews button {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(189, 117, 81);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 47px;
+}
+
+.post-reviews button:hover {
+  background-color: rgb(221, 186, 169);
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 55px;
+  grid-row-gap: 50px;
+  margin: 32px 0;
+}
+
+/*
+  restaurant Item
+*/
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgb(255, 254, 245);
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 5px;
+  top: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  opacity: 80%;
+  color: white;
+}
+
+.restaurant-item
+  .restaurant-item__header
+  .restaurant-item__header__rating
+  .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 10px 20px;
+}
+
+.restaurant-item .restaurant-item__content h2 {
+  min-height: 45px;
+  padding-top: 10px;
+}
+
+.restaurant-item .restaurant-item__content h2 a {
+  color: rgb(77, 15, 5);
+  text-decoration: none;
+  padding: 10px 0px;
+}
+
+.restaurant-item .restaurant-item__content h4 {
+  margin-bottom: 10px;
+  text-align: left;
+  color: rgb(88, 86, 77);
+}
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+/*
+  restaurant
+*/
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+  color: rgb(161, 153, 153);
+  padding: 10px;
+}
+
+/*
+   Like
+*/
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+   skip-link
+*/
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #4f4b3b;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

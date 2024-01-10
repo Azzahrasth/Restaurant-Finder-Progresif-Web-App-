@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Restaurant Catalogue App" />
+    <meta name="theme-color" content="#4f4b3b" />
+
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="icon" href="./favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="./app.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <title>Yummy Eatery</title>
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-link">Menuju ke konten</a>
+    <header class="app-bar">
+      <div class="app-bar__menu">
+        <button id="hamburgerButton">☰</button>
+      </div>
+
+      <div class="app-bar__brand">
+        <div class="app-bar__brand-logo">
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="./images/logo/Logo_Yummy_Eatery-small.png"
+            />
+
+            <img
+              src="./images/logo/Logo_Yummy_Eatery-large.png"
+              alt="Logo Yummy Eatery"
+            />
+          </picture>
+        </div>
+        <h1>Yummy Eatery</h1>
+      </div>
+      <nav id="navigationDrawer" class="app-bar__navigation">
+        <ul>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/like">Favorite</a></li>
+          <li><a href="https://github.com/azzahrasth">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="mainContent" tabindex="0"></main>
+    <footer>
+      <p>Copyright © 2023 - Yummy Eatery</p>
+    </footer>
+  </body>
+</html>
